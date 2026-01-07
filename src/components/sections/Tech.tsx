@@ -15,9 +15,12 @@ const techs = [
 
 export function Tech() {
     return (
-        <section id="tech" className="py-24 bg-[#080808]">
+        <section id="tech" className="py-24 bg-transparent">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold text-white mb-12 text-center">Software Engineering</h2>
+                <h2 className="text-3xl font-bold text-white mb-4 text-center">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-lumus-green via-lumus-blue to-lumus-purple">Tech Stack</span> Enterprise
+                </h2>
+                <p className="text-gray-400 text-center text-sm mb-12">Infraestrutura de nível mundial para performance e escala</p>
 
                 <div className="flex flex-wrap justify-center gap-6">
                     {techs.map((tech, i) => (

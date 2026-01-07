@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
     { name: "Início", href: "#hero" },
-    { name: "Por que Lumus", href: "#about" },
-    { name: "Serviços", href: "#services" },
-    { name: "Portfolio", href: "#showcase" },
-    { name: "Tecnologia", href: "#tech" },
+    { name: "Infraestrutura", href: "#about" },
+    { name: "Soluções", href: "#services" },
+    { name: "Casos de Sucesso", href: "#showcase" },
+    { name: "Tech Stack", href: "#tech" },
     { name: "Contato", href: "#contact" },
 ];
 
@@ -42,17 +42,14 @@ export function Navbar() {
                 )}
             >
                 <div className="container mx-auto px-6 flex items-center justify-between">
-                    <Link href="/" className="flex items-center gap-2 group">
+                    <Link href="/" className="flex items-center group">
                         <Image
-                            src="/logoLumus.svg"
+                            src="/lumusLogo.svg"
                             alt="Lumus Agency"
-                            width={40}
-                            height={40}
-                            className="h-8 w-auto transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12"
+                            width={128}
+                            height={128}
+                            className="h-32 w-auto transition-transform duration-300 group-hover:scale-110"
                         />
-                        <span className="text-xl font-bold tracking-tight text-white">
-                            lumus<span className="text-transparent bg-clip-text bg-gradient-to-r from-lumus-green via-lumus-blue to-lumus-purple">.agency</span>
-                        </span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -71,7 +68,7 @@ export function Navbar() {
                             href="#contact"
                             className="px-6 py-2 rounded-full border border-white/20 hover:border-lumus-blue/50 text-white text-sm font-medium transition-all hover:shadow-[0_0_20px_rgba(0,198,255,0.3)] hover:bg-white/5 active:scale-95"
                         >
-                            Iniciar Projeto
+                            Agendar Diagnóstico
                         </Link>
                     </div>
 
