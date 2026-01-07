@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, TargetAndTransition, VariantLabels, Transition } from 'framer-motion';
 
 function cn(...classes: (string | undefined | false)[]) {
     return classes.filter(Boolean).join(' ');
@@ -16,10 +16,10 @@ export interface RotatingTextRef {
 
 export interface RotatingTextProps {
     texts: string[];
-    transition?: object;
-    initial?: object;
-    animate?: object;
-    exit?: object;
+    transition?: Transition;
+    initial?: TargetAndTransition | VariantLabels | boolean;
+    animate?: TargetAndTransition | VariantLabels | boolean;
+    exit?: TargetAndTransition | VariantLabels;
     animatePresenceMode?: 'wait' | 'sync' | 'popLayout';
     animatePresenceInitial?: boolean;
     rotationInterval?: number;
