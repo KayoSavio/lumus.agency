@@ -24,7 +24,7 @@ export function Footer() {
                     </div>
                     <div className="flex gap-6">
                         <Link href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></Link>
-                        <Link href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></Link>
+                        <Link href="https://www.instagram.com/lumus.agency__/" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></Link>
                         <Link href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></Link>
                         <Link href="#" className="text-gray-400 hover:text-white transition-colors"><Github className="w-5 h-5" /></Link>
                     </div>
