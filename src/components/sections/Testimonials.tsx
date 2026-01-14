@@ -1,37 +1,37 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Linkedin } from "lucide-react";
 import AnimatedList from "@/components/animations/AnimatedList";
 import GradientText from "@/components/animations/GradientText";
 import SpotlightCard from "@/components/animations/SpotlightCard";
 
 const testimonials = [
     {
-        name: "Carlos Mendes",
-        role: "CEO",
-        company: "TechCorp Brasil",
-        image: "/api/placeholder/80/80",
-        content: "A LUMUS transformou nossa operação digital. Escalamos de R$ 2M para R$ 15M em 18 meses com a infraestrutura que eles construíram.",
-        metric: "+650% crescimento",
+        name: "Tulio de Aguiar",
+        role: "Engenheiro Ambiental",
+        company: "Especialista em Qualidade e Melhoria Contínua",
+        linkedIn: "https://www.linkedin.com/in/tuliodeaguiar/",
+        content: "Tive a oportunidade de conhecer os trabalhos do Kayo Savio em um projeto de design, e fiquei impressionado com sua habilidade e profissionalismo. Mesmo em um curto espaço de tempo, Kayo demonstrou um profundo conhecimento técnico e um talento incrível para transformar ideias em realidade. Kayo é detalhista, criativo e altamente comprometido com a qualidade do trabalho.",
+        highlight: "Superou minhas expectativas",
         color: "#00f597"
     },
     {
-        name: "Ana Paula Silva",
-        role: "CTO",
-        company: "FinanceHub",
-        image: "/api/placeholder/80/80",
-        content: "Automação com IA que realmente funciona. Reduzimos 70% dos custos operacionais e aumentamos a satisfação do cliente em 40%.",
-        metric: "70% redução de custos",
+        name: "Thiago Valentim Martins",
+        role: "Senior Software Engineer",
+        company: "Node | Typescript | NestJS | Back-end",
+        linkedIn: "https://www.linkedin.com/in/thiago-valentim-martins-3a0b22121/",
+        content: "Kayo é um profissional criativo, diligente, e colaborativo. Trabalhei diretamente com ele em diversas ocasiões e posso afirmar o valor que ele dá aos detalhes e à abertura à opiniões. Indico para todos que queiram se surpreender positivamente com suas entregas.",
+        highlight: "Entregas surpreendentes",
         color: "#64c6fc"
     },
     {
-        name: "Roberto Almeida",
-        role: "Diretor de Tecnologia",
-        company: "Marketplace Pro",
-        image: "/api/placeholder/80/80",
-        content: "Parceria estratégica de verdade. O ecossistema mobile que desenvolveram gerou R$ 3M em vendas diretas no primeiro trimestre.",
-        metric: "R$ 3M em vendas",
+        name: "Alexander Martins La Espina",
+        role: "Empreendedor em Série",
+        company: "Fundador Licitei & TuriVerde",
+        linkedIn: "https://www.linkedin.com/in/laespina/",
+        content: "Venho aqui deixar o meu agradecimento ao Kayo, estava a procura de um desenvolvedor para fazer um trabalho freelance para a minha empresa, acontece que eu achei um profissional que é fora de curva. Estou muito feliz com o resultado do projeto em si, e já fechamos outros trabalhos. Super recomendo!",
+        highlight: "Profissional fora de curva",
         color: "#d865f3"
     }
 ];
@@ -58,25 +58,36 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
                 "{testimonial.content}"
             </p>
 
-            {/* Metric highlight */}
+            {/* Highlight */}
             <div className="inline-block px-3 py-1 rounded-full bg-lumus-green/10 border border-lumus-green/30 mb-6">
-                <span className="text-lumus-green text-xs font-bold">{testimonial.metric}</span>
+                <span className="text-lumus-green text-xs font-bold">{testimonial.highlight}</span>
             </div>
 
             {/* Author */}
-            <div className="flex items-center gap-3 pt-4 border-t border-white/5">
-                <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center"
-                    style={{ background: `linear-gradient(135deg, ${testimonial.color}, ${testimonial.color}80)` }}
+            <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                <div className="flex items-center gap-3">
+                    <div
+                        className="w-12 h-12 rounded-full flex items-center justify-center"
+                        style={{ background: `linear-gradient(135deg, ${testimonial.color}, ${testimonial.color}80)` }}
+                    >
+                        <span className="text-white font-bold text-lg">
+                            {testimonial.name.split(' ').map(n => n[0]).join('')}
+                        </span>
+                    </div>
+                    <div>
+                        <p className="text-white font-semibold">{testimonial.name}</p>
+                        <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    </div>
+                </div>
+                <a
+                    href={testimonial.linkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-[#0077B5]/10 hover:bg-[#0077B5]/20 border border-[#0077B5]/30 transition-all hover:scale-105"
+                    title="Ver perfil no LinkedIn"
                 >
-                    <span className="text-white font-bold text-lg">
-                        {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                </div>
-                <div>
-                    <p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.role} • {testimonial.company}</p>
-                </div>
+                    <Linkedin className="w-5 h-5 text-[#0077B5]" />
+                </a>
             </div>
 
             {/* Glow effect */}
