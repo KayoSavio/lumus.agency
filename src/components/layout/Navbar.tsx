@@ -11,7 +11,6 @@ const navLinks = [
     { name: "Início", href: "#hero" },
     { name: "Infraestrutura", href: "#about" },
     { name: "Soluções", href: "#services" },
-    { name: "Casos de Sucesso", href: "#showcase" },
     { name: "Tech Stack", href: "#tech" },
     { name: "Contato", href: "#contact" },
 ];

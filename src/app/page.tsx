@@ -17,7 +17,7 @@ export default function Home() {
       <Journey />
       <About />
       <Services />
-      <Showcase />
+      {/* <Showcase /> */}
       <Tech />
       <Testimonials />
       <Contact />
